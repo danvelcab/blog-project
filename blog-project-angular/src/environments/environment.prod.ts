@@ -1,3 +1,7 @@
 export const environment = {
-  production: true
+  production: true,
+  protocol: 'http://',
+  host: 'localhost/blog-project/blog-project-laravel/public/',
+  apiPrefix: 'api/',
+  version: ''
 };
