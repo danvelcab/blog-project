@@ -15,8 +15,9 @@
     <th scope="row">{{ project.status }}</th>
     <th scope="row">{{ project.type }}</th>
     <th scope="row">
-      <a href="javascript:;">Editar</a>
-      <a href="javascript:;">Borrar</a>
+      <a href="javascript:;" (click)="edit(project.id)">Editar</a>
+      -
+      <a href="javascript:;" (click)="delete(project.id)">Borrar</a>
     </th>
   </tr>
   </tbody>

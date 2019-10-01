@@ -4,25 +4,27 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProjectPageComponent } from './project/project-page/project-page.component';
-import { ProjectTableComponentComponent } from './project/project-table-component/project-table-component.component';
-import { ProjectModalFormComponentComponent } from './project/project-modal-form-component/project-modal-form-component.component';
-import { ProjectFormComponentComponent } from './project/project-form-component/project-form-component.component';
-import { ConfirmateActionModalComponentComponent } from './commons/confirmate-action-modal-component/confirmate-action-modal-component.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProjectTableComponent } from './project/project-table/project-table.component';
+import { ProjectFormComponent } from './project/project-form/project-form.component';
+import { ConfirmateActionModalComponent } from './commons/confirmate-action-modal/confirmate-action-modal.component';
+import { ModalFormComponent } from './commons/modal-form/modal-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectPageComponent,
-    ProjectTableComponentComponent,
-    ProjectModalFormComponentComponent,
-    ProjectFormComponentComponent,
-    ConfirmateActionModalComponentComponent
+    ProjectTableComponent,
+    ProjectFormComponent,
+    ConfirmateActionModalComponent,
+    ModalFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

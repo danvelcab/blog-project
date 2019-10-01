@@ -2,7 +2,7 @@ import { ProjectStatusHelper } from '../helpers/project-status-helper';
 /**
  * Created by Daniel on 29/09/2019.
  */
-export class Project {
+export class AProject {
   private _id: any;
   private _name: string;
   private _description: string;
@@ -10,7 +10,7 @@ export class Project {
   private _type: string;
 
 
-  constructor(projects: any = null) {
+  constructor(projects: any = []) {
     this._id = projects['id'] ? projects['id'] : null;
     this._name = projects['name'] ? projects['name'] : null;
     this._description = projects['description'] ? projects['description'] : null;
