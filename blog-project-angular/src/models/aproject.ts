@@ -1,4 +1,4 @@
-import { ProjectStatusHelper } from '../helpers/project-status-helper';
+import { ProjectStatus } from './project-status';
 /**
  * Created by Daniel on 29/09/2019.
  */
@@ -15,7 +15,7 @@ export class AProject {
     this._name = projects['name'] ? projects['name'] : null;
     this._description = projects['description'] ? projects['description'] : null;
     this._type = projects['type'] ? projects['type'] : null;
-    this._status = projects['status'] ? projects['status'] : ProjectStatusHelper.DRAFT_STATUS;
+    this._status = projects['status'] ? projects['status'] : ProjectStatus.DRAFT;
   }
 
   get id(): any {

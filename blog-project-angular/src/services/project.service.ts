@@ -13,6 +13,7 @@ export class ProjectService {
   constructor(public _http: HttpClient,
               private errorHandlerService: ErrorHandlerService) {}
 
+  // Funcion para hacer una petición, para obtener un proyecto dado un id
   get(id: any): Observable<any> {
     return this._http.get(ApiRouteHelper.getGetURL(id)).pipe(
       map(res => {
@@ -24,6 +25,7 @@ export class ProjectService {
       }),
     );
   }
+  // Función para hacer una petición y obtener un listado de proyectos
   list(): Observable<AProject[]> {
     return this._http.get(ApiRouteHelper.getListURL())
       .pipe(
@@ -38,6 +40,7 @@ export class ProjectService {
         }),
       );
   }
+  // Función para hacer una petición para guardar un proyecto
   store(project: AProject): Observable<any> {
     let params = {
       name: project.name,
@@ -55,6 +58,7 @@ export class ProjectService {
       }),
     );
   }
+  // Función para hacer una petición para actualizar un proyecto
   update(project: AProject): Observable<any> {
     let params = {
       name: project.name,
@@ -72,6 +76,7 @@ export class ProjectService {
       }),
     );
   }
+  // Función para hacer una petición para borrar un proyecto dado un id
   delete(id: any): Observable<Object> {
     return this._http.delete(ApiRouteHelper.getDeleteURL(id));
   }
