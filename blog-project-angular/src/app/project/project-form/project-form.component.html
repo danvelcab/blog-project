@@ -1,0 +1,29 @@
+<ng-container *ngIf="model">
+  <div class="form-group">
+    <label for="name">Nombre</label>
+    <input type="text" [(ngModel)]="model.name" class="form-control" id="name" placeholder="Escribe un nombre">
+  </div>
+  <div class="form-group">
+    <label for="description">Descripción</label>
+    <textarea type="text" [(ngModel)]="model.description" class="form-control" id="description" placeholder="Escribe una descripción"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="status">Estado</label>
+    <select [(ngModel)]="model.status" class="form-control" id="status">
+      <option [value]="null">Selecciona una opción</option>
+      <option [value]="'draft'">Borrador</option>
+      <option [value]="'published'">Publicado</option>
+      <option [value]="'unpublished'">Despublicado</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="type">Tipo</label>
+    <select [(ngModel)]="model.type" class="form-control" id="type">
+      <option [value]="null">Selecciona una opción</option>
+      <option [value]="'music'">Música</option>
+      <option [value]="'cine'">Cine</option>
+      <option [value]="'videogame'">Videojuego</option>
+      <option [value]="'other'">Otro</option>
+    </select>
+  </div>
+</ng-container>

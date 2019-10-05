@@ -1,0 +1,24 @@
+<div class="jumbotron">
+  <h1 class="display-4">Administración de proyectos</h1>
+  <p class="lead">Esta página es un listado de los proyectos almacenados en la base de datos. Desde ella además de ver
+    los datos de un proyecto se puede crear proyectos, editarlos y borrarlos</p> {{action}}
+  <hr class="my-4">
+  <a href="javascript:;" (click)="create()">Crear nuevo</a>
+  <table app-project-table
+         class="table table-striped"
+         (editEventEmitter)="edit($event)"
+         (deleteEventEmitter)="delete($event)">
+
+  </table>
+</div>
+<app-modal-form
+  [modal_id]="'project_modal'"
+  [title]="getModalTitle()"
+  (submitEventEmitter)="submit()">
+  <div class="modal-body" form>
+    <form app-project-form (succesEventEmitter)="onSuccessForm()"></form>
+  </div>
+</app-modal-form>
+<app-confirmate-action-modal
+  [modal_id]="'confirmation_modal'"
+  (submitEventEmitter)="confirmationSubmit()"></app-confirmate-action-modal>
